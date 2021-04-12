@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="progress-waves.css" />
+<title>Progress Waves &ndash; var()</title>
+<style type="text/css">
+.just-a-box {
+	width: 300px;
+	height: 300px;
+	border: 3px #000 dashed;
+	float: left;
+	margin: 1em;
+}
+
+.in-progress.my-class-1 {
+	/*  Customize your own progress waves here  */
+	--wave-diameter: 220px;
+	--wave-thickness: 9px;
+	--wave-duration: 3s;
+}
+
+.in-progress.my-class-2 {
+	/*  Customize your own progress waves here  */
+	--wave-diameter: 1.5cm;
+	--wave-thickness: .12cm;
+	--wave-duration: .8s;
+}
+
+/*  Etc. etc.  */
+</style>
+</head>
+
+<body>
+
+
+<h1>Progress Waves</h1>
+
+<p style="font-style: italic;">A pure-CSS progress &ldquo;spinner&rdquo; for every element declared with <code>"in-progress"</code> class &ndash; <code>var()</code> version</p>
+
+<div class="my-class-1 in-progress just-a-box"></div>
+
+<div class="my-class-2 in-progress just-a-box"></div>
+
+<!-- default -->
+<div class="in-progress just-a-box"></div>
+
+</body>
+</html>

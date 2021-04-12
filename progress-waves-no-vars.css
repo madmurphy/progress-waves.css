@@ -1,0 +1,59 @@
+/*\
+|*|
+|*|			:: progress-waves.css ::
+|*|
+|*|
+|*|	A pure-CSS progress spinner
+|*|
+|*|	https://github.com/madmurphy/progress-waves.css/
+|*|
+|*|	Version 1.0.0
+|*|
+|*|	(c) madmurphy333@gmail.com
+|*|
+|*|	**progress-waves.css!** is free software. You can redistribute it and/or
+|*|	modify it under the terms of the GPL license, version 3 or any later
+|*|	version.
+|*|
+|*|	https://www.gnu.org/licenses/gpl-3.0.html
+|*|
+|*|
+\*/
+
+.in-progress {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+@keyframes progresswave {
+	from {
+		border: 3px rgba(0, 0, 0, .5) solid;
+		width: 6px;
+		height: 6px;
+		border-radius: 6px;
+	}
+	to {
+		border: 3px rgba(0, 0, 0, 0) solid;
+		width: 48px;
+		height: 48px;
+		border-radius: 48px;
+	}
+}
+
+.in-progress::before, .in-progress::after {
+	content: "";
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	animation: 1.2s linear infinite progresswave;
+}
+
+.in-progress::after {
+	animation-delay: .6s;
+}
